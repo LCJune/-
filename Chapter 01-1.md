@@ -1,6 +1,6 @@
 ### 인공지능(Artificial Intelligence)의 분류
-    **강인공지능(Strong AI)**: 인간과 거의 유사한 인공지능
-    **약인공지능(Weak AI)**: 사람의 일을 도와주는 보조 역할을 하는 인공지능
+   **강인공지능(Strong AI)**: 인간과 거의 유사한 인공지능
+   **약인공지능(Weak AI)**: 사람의 일을 도와주는 보조 역할을 하는 인공지능
 
 
 ### 머신러닝(Machine Learning)
