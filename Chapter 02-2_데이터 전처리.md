@@ -7,7 +7,7 @@
 > **브로드캐스팅(broadcasting)**: 크기가 다른 넘파이 배열에서 자동으로 사칙연산을 모든 행이나 열로 확장하여 수행하는 기능
 
 ## 핵심 패키지와 함수
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp###scikit-learn(sklearn)
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ### scikit-learn(sklearn)
 > **train_test_split()**: 훈련 데이터를 훈련 세트와 테스트 세트로 나누는 함수이다.
 > 테스트 세트로 나눌 비율은 *test_size* 매개변수에서 지정할 수 있으며 기본값은 0.25(25%)이다.
 >
