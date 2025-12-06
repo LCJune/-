@@ -16,7 +16,7 @@ K-최근접 이웃 알고리즘 또한 지도 학습 알고리즘이다. 지도 
 
 ## 핵심 패키지와 함수
  ### numpy
-:python의 대표적인 배열 라이브러리이다. 고차원의 배열을 손쉽게 만들고 조작할 수 있는 간편한 도구를 많이 제공한다.
+: python의 대표적인 배열 라이브러리이다. 고차원의 배열을 손쉽게 만들고 조작할 수 있는 간편한 도구를 많이 제공한다.
 
 >**seed()**: 넘파이에서 난수를 생성하기 위한 정수 초깃값을 지정하는 함수. 초깃값이 같으면 동일한 난수를 생성한다.
 >
@@ -75,3 +75,4 @@ kn.predict(test_input)
 print(test_target)
 #output: array([0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0])
 ```
+<img width="580" height="432" alt="image" src="https://github.com/user-attachments/assets/c9a17f89-fd8b-4905-b3eb-850c6a2a293d" />
