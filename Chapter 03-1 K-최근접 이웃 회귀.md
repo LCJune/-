@@ -28,3 +28,85 @@
 ### numpy
 > **reshape()**: 배열의 크기를 바꾸는 메서드. 바꾸고자 하는 배열의 크기를 매개변수로 전달한다.
 > 바꾸기 전후의 원소 개수는 동일해야 한다. 매개변수로 -1을 전달할 경우, 다른 차원을 채우고 남은 원소에 맞게 차원을 정하라는 의미이다.
+
+
+```python
+import numpy as np
+
+perch_length = np.array(
+    [8.4, 13.7, 15.0, 16.2, 17.4, 18.0, 18.7, 19.0, 19.6, 20.0,
+     21.0, 21.0, 21.0, 21.3, 22.0, 22.0, 22.0, 22.0, 22.0, 22.5,
+     22.5, 22.7, 23.0, 23.5, 24.0, 24.0, 24.6, 25.0, 25.6, 26.5,
+     27.3, 27.5, 27.5, 27.5, 28.0, 28.7, 30.0, 32.8, 34.5, 35.0,
+     36.5, 36.0, 37.0, 37.0, 39.0, 39.0, 39.0, 40.0, 40.0, 40.0,
+     40.0, 42.0, 43.0, 43.0, 43.5, 44.0]
+     )
+perch_weight = np.array(
+    [5.9, 32.0, 40.0, 51.5, 70.0, 100.0, 78.0, 80.0, 85.0, 85.0,
+     110.0, 115.0, 125.0, 130.0, 120.0, 120.0, 130.0, 135.0, 110.0,
+     130.0, 150.0, 145.0, 150.0, 170.0, 225.0, 145.0, 188.0, 180.0,
+     197.0, 218.0, 300.0, 260.0, 265.0, 250.0, 250.0, 300.0, 320.0,
+     514.0, 556.0, 840.0, 685.0, 700.0, 700.0, 690.0, 900.0, 650.0,
+     820.0, 850.0, 900.0, 1015.0, 820.0, 1100.0, 1000.0, 1100.0,
+     1000.0, 1000.0]
+     )
+
+import matplotlib.pyplot as plt
+
+plt.scatter(perch_length, perch_weight)
+plt.xlabel('length')
+plt.ylabel('weight')
+plt.show()
+
+from sklearn.model_selection import train_test_split
+
+train_input, test_input, train_target, test_target = train_test_split(perch_length, perch_weight, random_state=42)
+
+train_input = train_input.reshape(-1, 1)
+test_input = test_input.reshape(-1, 1) 
+
+from sklearn.neighbors import KNeighborsRegressor
+
+knr = KNeighborsRegressor()
+knr.fit(train_input, train_target)
+
+print(knr.score(test_input, test_target))
+
+from sklearn.metrics import mean_absolute_error
+
+test_prediction = knr.predict(test_input)
+
+mae = mean_absolute_error(test_target, test_prediction)
+print(mae)
+#output: 19.157142857142862 -> 타깃값과 평균 19g 정도의 오차
+
+print(knr.score(train_input,train_target))
+
+knr.n_neighbors = 3 #과소적합 문제 해결을 위해 모델을 복잡하게 만듦
+
+knr.fit(train_input, train_target)
+print(knr.score(train_input, train_target))
+print(knr.score(test_input, test_target))
+
+knr = KNeighborsRegressor()
+
+x = np.arange(5, 45).reshape(-1,1)
+
+for n in [1, 5, 10]:
+  knr.n_neighbors = n
+  knr.fit(train_input, train_target)
+  prediction = knr.predict(x) # 농어의 길이 x(5 ~ 45)에 대한 무게(타깃값) 예측
+
+  plt.scatter(train_input, train_target)
+  plt.plot(x, prediction) #x, y값에 따라 선 그래프를 그리는 함수이다.
+  plt.title('n_neighbors = {}'.format(n))
+  plt.xlabel('length')
+  plt.ylabel('weight')
+  plt.show()
+```
+<img width="290" height="227" alt="image" src="https://github.com/user-attachments/assets/a003aa25-bd41-4a7f-8ab7-ad807b3fa56c" />
+<img width="290" height="227" alt="image" src="https://github.com/user-attachments/assets/8c7a8571-764c-478e-9d75-925187eea437" />
+<img width="290" height="227" alt="image" src="https://github.com/user-attachments/assets/2b58f921-f490-452a-8feb-0d2dac4d8e92" />
+
+
+
