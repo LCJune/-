@@ -16,5 +16,5 @@
 ## 핵심 패키지와 함수
 ### scikit-learn
 > **LogisticRegression**: 선형 분류 알고리즘인 로지스틱 회귀를 위한 클래스이다.
-> -solver* 매개변수에서 사용할 알고리즘을 사용할 수 있다. sag, saga, newton-cholesky(대규모 데이터셋에 효율적) 등이 있다.
-> -penalty* 매개변수에서
+> -solver 매개변수에서 사용할 알고리즘을 사용할 수 있다. sag, saga, newton-cholesky(대규모 데이터셋에 효율적) 등이 있다.  
+> -penalty 매개변수에서
