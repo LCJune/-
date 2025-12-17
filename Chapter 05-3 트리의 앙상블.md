@@ -24,3 +24,6 @@
 > 이 과정은 실제 클래스와 무관하게 이루어지며, 리프 노드의 값은 해당 노드 내 샘플들의 손실을 최소화하도록 계산된다.
 > 전체 모델을 수식으로 표현하면 다음과 같다.  
 > <img width="264" height="66" alt="image" src="https://github.com/user-attachments/assets/e0d4ad1b-56eb-42f7-b5b2-d2abe4d57c08" />
+> F0(x): 초기 상수
+> η: learning rate
+> 각 ℎ𝑚(𝑥): 입력 의존적 보정 함수
