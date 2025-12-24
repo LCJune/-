@@ -17,4 +17,4 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
   wki는 ‘i번째 픽셀이 k번째 주성분 방향을 구성하는 데 얼마나 기여하는가’를 나타내는 값으로,  
   **전체 데이터셋**의 공분산에 영향을 받는다.  
 * PCA의 1번 주성분은 다음을 만족한다.  ​
-  <img width="481" height="185" alt="image" src="https://github.com/user-attachments/assets/1b75a06f-fa6b-4f68-bf7f-c3f7c7019be8" />
+<img width="481" height="185" alt="image" src="https://github.com/user-attachments/assets/1b75a06f-fa6b-4f68-bf7f-c3f7c7019be8" />
