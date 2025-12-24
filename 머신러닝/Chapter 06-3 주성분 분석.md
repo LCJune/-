@@ -28,4 +28,4 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
 **핵심 속성(attribute)**  
 * *components_*
   > pca.components_.shape
-  > # (n_components, n_features)
+  > #(n_components, n_features)
