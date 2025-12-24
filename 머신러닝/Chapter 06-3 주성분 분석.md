@@ -26,6 +26,26 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
 > 그 좌표계에서 일부 축만 남겨 데이터를 표현·복원하는 변환기(transformer)이다.
 
 **핵심 속성(attribute)**  
-* *components_*
-  > pca.components_.shape
+* *components_*  
+  > pca.components_.shape  
   > #(n_components, n_features)
+  각 행: 하나의 주성분 축  
+  각 값: 픽셀(특성)의 가중치 wki  
+  수학적 의미: 공분산 행렬의 고유벡터, 분산을 최대화하는 방향
+  
+* *mean_*  
+  전체 데이터셋의 평균 벡터  
+  transform시 항상 빼줌  
+  의미: "절대 밝기 제거(이미지 기준)", 변화량(패턴)만 분석  
+
+* *explaned_variance_*  
+  각 주성분이 설명하는 분산의 크기  
+  고유값에 해당  
+
+* *explaned_variance_ratio_  
+  전체 분산 중 각 주성분이 차지하는 비율
+  차원 축소 판단 기준
+
+* singular_values_  
+  SVD(특이값 분해)에 나오는 특이값  
+  고유값과 직접 연결됨  
