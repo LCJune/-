@@ -1,3 +1,11 @@
+## 핵심 키워드
+* **차원 축소**: 원본 데이터의 특성을 적은 수의 새로운 특성으로 변환하는 비지도 학습의 일종.  
+  차원 축소를 하면 저장 공간을 줄이고 시각화하기 쉬우며, 다른 알고리즘의 성능을 높일 수도 있다.  
+* **주성분 분석**: 차원 축소 알고리즘의 하나로, 데이터에서 분산이 가장 큰 방향을 찾는 방법이다.
+  해당 방향을 가리키는 벡터를 주성분이라고 부른다. 원본 데이터를 주성분에 투영하면 새로운 특성을 만들 수 있다.  
+  일반적으로 주성분은 원본 데이터에 있는 특성 개수보다 작다.
+* **설명된 분산(explaned variance)**: 주성분 분석에서 각 주성분이 얼마나 원본 데이터의 분산을 잘 나타내는지 기록한 것.
+
 ## 주성분 분석(Principal Component Analysis, PCA)
 > 대표적인 차원축소 알고리즘의 하나로, 데이터에 있는 분산이 가장 큰 방향 벡터(주성분)를 찾는다.  
 > 분산이 크다는 것은 “데이터가 어떻게 퍼져 있는지”, “어디에서 많이 변하는지”, “어디는 거의 변하지 않는지”  
@@ -27,6 +35,9 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
 > 그 좌표계에서 일부 축만 남겨 데이터를 표현·복원하는 변환기(transformer)이다.
 
 **핵심 속성(attribute)**  
+* *n_components*: 주성분 개수  
+* random_state: Numpy 난수 시드값
+    
 * *components_*  
   > ```python
   > pca.components_.shape  
@@ -66,4 +77,6 @@ transform(n_components) 메서드는 데이터셋을 n개 주성분에 대해 tr
 
 **inverse_transform()**
 아래 수식을 바탕으로 데이터를 원 형태로 복구한다.  
-<img width="476" height="170" alt="image" src="https://github.com/user-attachments/assets/ea89d609-f3c2-4b3e-9176-b99f7c9aeeaf" />
+> <img width="476" height="170" alt="image" src="https://github.com/user-attachments/assets/ea89d609-f3c2-4b3e-9176-b99f7c9aeeaf" />
+
+## 코드 전문
