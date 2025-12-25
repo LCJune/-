@@ -27,8 +27,10 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
 
 **핵심 속성(attribute)**  
 * *components_*  
+  > ```python
   > pca.components_.shape  
   > #(n_components, n_features)
+  > ```
    
   각 행: 하나의 주성분 축  
   각 값: 픽셀(특성)의 가중치 wki  
@@ -50,3 +52,6 @@ PCA에서, 각각의 주성분 벡터 z의 수식적 정의는 다음과 같다.
 * singular_values_  
   SVD(특이값 분해)에 나오는 특이값  
   고유값과 직접 연결됨  
+
+**transform()**
+```python
