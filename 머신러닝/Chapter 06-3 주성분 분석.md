@@ -79,4 +79,7 @@ transform(n_components) 메서드는 데이터셋을 n개 주성분에 대해 tr
 아래 수식을 바탕으로 데이터를 원 형태로 복구한다.  
 > <img width="476" height="170" alt="image" src="https://github.com/user-attachments/assets/ea89d609-f3c2-4b3e-9176-b99f7c9aeeaf" />
 
+
+
+      
 ## 코드 전문
