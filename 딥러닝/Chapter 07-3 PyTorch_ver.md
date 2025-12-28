@@ -129,6 +129,7 @@ plt.legend()
 plt.show()
 ```
 <img width="263" height="216" alt="image" src="https://github.com/user-attachments/assets/51d824fa-18a6-455b-ba3a-d40b6ebef422" />  
+
 ```python
 model.load_state_dict(torch.load('best_model.pt', weights_only=True))
 # <All keys matched successfully>
