@@ -76,15 +76,20 @@ for epoch in range(epochs):
         loss.backward()
         optimizer.step()
         train_loss += loss.item()
+        # item(): 하나의 스칼라 값을 파이썬 기본 타입(float, int, bool..)으로 꺼내는 메서드
 
     model.eval()
     val_loss = 0
+    
     with torch.no_grad():
+        '''PyTorch의 자동미분(autograd) 엔진을 일시적으로 비활성화하여,
+           gradient 계산과 계산 그래프 생성을 모두 중단하는 컨텍스트 매니저'''
+
         val_scaled = val_scaled.to(device)
         val_target = val_target.to(device)
         outputs = model(val_scaled)
         loss = criterion(outputs, val_target)
-        val_loss = loss.item()
+        val_loss = loss.item() 
 
     train_hist.append(train_loss/batches)
     val_hist.append(val_loss)
