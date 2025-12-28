@@ -22,10 +22,11 @@
 
 
 ### 2. Momentum
+물리학의 '관성'의 원리를 모델 학습에 적용한 방식으로, 이전의 그레디언트를 가속도처럼 활용한다.  
 > <img width="500" height="153" alt="image" src="https://github.com/user-attachments/assets/66a8c03c-3ce5-4ee5-b08d-acdaa7f713d9" />
 
 ### 3. Nesterov Momentum
-
+일반적인 Momentum의 경우, 
 ### 4. Adagrad
 > <img width="526" height="145" alt="image" src="https://github.com/user-attachments/assets/3dece0cb-1e92-4738-b933-2a032833b214" />
 
