@@ -6,6 +6,10 @@
 > 입력 값이 양수일 경우 입력을 그대로 통과시키고, 0 이하일 경우 0을 출력하는 함수. 즉, f(x) = max(0, x)
 > sigmoid 함수는 층이 많을수록 활성화 함수의 양 끝에서 변화가 작기 때문에 학습이 어려워지지만, 렐루함수는 그런 문제가 없고 계산이 간단하다.  
 
+**적응적 학습률(adaptive learning rate)**
+> 모델이 학습을 통해 최적접에 다가갈수록 학습률을 낮추면, 안정적으로 최적점에 수렴할 가능성이 높다.
+> 이러한 학습률을 적응적 학습률이라고 한다.
+
 
 ## 옵티마이저(Optimizer)
 머신러닝·딥러닝 모델에서 손실 함수(loss function)를 최소화하도록 모델의 파라미터(가중치, 편향)를 어떻게, 어떤 규칙으로 업데이트할지 정의한 알고리즘을 의미한다.  
@@ -43,9 +47,8 @@ RMSprop은 gradient의 제곱을 전부 누적하지 않고, 비교적 최근 gr
 > <img width="520" height="289" alt="image" src="https://github.com/user-attachments/assets/ad3b91af-09fc-4b3e-8942-c09028afc167" />
 > <img width="351" height="232" alt="image" src="https://github.com/user-attachments/assets/adfde11e-ae78-48af-8a0b-ef29a60e13d5" />  
 
-
-
 ### 6. Adam
+모멘텀 최적화와 RMSprop의 장점을 접목한 방식이다.
 > <img width="512" height="139" alt="image" src="https://github.com/user-attachments/assets/03bf518a-2a28-463b-98ea-6947de3c3b83" />
 > <img width="500" height="138" alt="image" src="https://github.com/user-attachments/assets/a7fed19b-8b25-4c31-b6b6-092ecf885b13" />
 
