@@ -1,3 +1,5 @@
+## 핵심 키워드 
+
 ```python
 import keras
 
@@ -28,7 +30,8 @@ model.compile(loss = 'sparse_categorical_crossentropy', metrics = ['accuracy'])
 fit() 메서드는 History 클래스 객체를 반환한다.
 아래 histroy 객체에는 훈련 측정값이 담겨 있는 history 딕셔너리가 들어 있다.
 """
-history = model.fit(train_scaled, train_target, epochs = 5, verbose = 0) # verbpse = 0으로 지정시 훈련 과정을 표시하지 않는다.
+history = model.fit(train_scaled, train_target, epochs = 5, verbose = 0)
+# verbpse = 0으로 지정시 훈련 과정을 표시하지 않는다.
 print(history.history.keys())
 
 import matplotlib.pyplot as plt
