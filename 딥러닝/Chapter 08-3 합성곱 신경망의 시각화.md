@@ -1,4 +1,3 @@
-<img width="1182" height="165" alt="image" src="https://github.com/user-attachments/assets/7c8344d5-983b-4392-b7da-b41529b7c4db" />## 핵심 키워드
 **가중치 시각화**: 합성곱 층의 가중치를 이미지로 출력하는 것.  
 CNN은 주로 이미지를 다루기 때문에 가중치가 시각적인 패턴을 학습하는지 알아볼 수 있다.  
 
