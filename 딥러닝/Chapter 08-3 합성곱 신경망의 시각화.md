@@ -62,7 +62,7 @@ plt.ylabel('count')
 plt.show()
 ```
 > <img width="562" height="432" alt="image" src="https://github.com/user-attachments/assets/9ca8292b-1835-4ea3-b53b-07e076712f40" />  
-가중치가 0을 중심으로 종 모양의 분포를 띠고 있다.
+> 가중치가 0을 중심으로 종 모양의 분포를 띠고 있다.
 
 ```python
 fig, axs = plt.subplots(2, 16, figsize=(15,2))
@@ -74,7 +74,7 @@ plt.show()
 ```
 > <img width="1182" height="165" alt="image" src="https://github.com/user-attachments/assets/c3b793ce-2a8e-4812-82f3-8a13bc0cf479" />
 > 가중치 값이 무작위로 나열된 것이 아니고, 어떠한 패턴을 가지고 있다.  
-> 예를 들어, 두 번째 줄의 왼쪽에서 여덟 번째 가중치는 왼쪽 3픽셀의 값이 다른 픽셀보다 상대적으로 낮다.(어두운 부분일수록 값이 낮음)  
+> 예를 들어, 두 번째 줄의 왼쪽에서 여덟 번째 가중치는 왼쪽 3픽셀의 값이 다른 픽셀보다 상대적으로 낮다.(어두운 부분일수록 값이 낮음)    
 > 이 가중치는 오른쪽에 놓인 직선을 만나면 크게 활성화될 것이다.
 ```python
 #비훈련 모델과의 비교
@@ -117,16 +117,7 @@ conv_acti = keras.Model(model.inputs[0], model.layers[0].output)
 # 특성 맵 시각화
 (train_input, train_target), (test_input, test_target) =\
     keras.datasets.fashion_mnist.load_data()
-'''
-ownloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz
-29515/29515 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
-Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-images-idx3-ubyte.gz
-26421880/26421880 ━━━━━━━━━━━━━━━━━━━━ 2s 0us/step
-Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-labels-idx1-ubyte.gz
-5148/5148 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step
-Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/t10k-images-idx3-ubyte.gz
-4422102/4422102 ━━━━━━━━━━━━━━━━━━━━ 1s 0us/step
-'''
+
 plt.imshow(train_input[0], cmap='gray_r')
 plt.show()
 ```
