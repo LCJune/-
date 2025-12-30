@@ -61,7 +61,8 @@ plt.xlabel('weight')
 plt.ylabel('count')
 plt.show()
 ```
-> <img width="562" height="432" alt="image" src="https://github.com/user-attachments/assets/9ca8292b-1835-4ea3-b53b-07e076712f40" />  
+> <img width="562" height="432" alt="image" src="https://github.com/user-attachments/assets/9ca8292b-1835-4ea3-b53b-07e076712f40" />
+> 
 > 가중치가 0을 중심으로 종 모양의 분포를 띠고 있다.
 
 ```python
@@ -75,7 +76,7 @@ plt.show()
 > <img width="1182" height="165" alt="image" src="https://github.com/user-attachments/assets/c3b793ce-2a8e-4812-82f3-8a13bc0cf479" />
 > 
 > 가중치 값이 무작위로 나열된 것이 아니고, 어떠한 패턴을 가지고 있다.  
-> 예를 들어, 두 번째 줄의 왼쪽에서 여덟 번째 가중치는 왼쪽 3픽셀의 값이 다른 픽셀보다 상대적으로 낮다.(어두운 부분일수록 값이 낮음)    
+> 예를 들어, 두 번째 줄의 왼쪽에서 여덟 번째 가중치는 왼쪽 3픽셀의 값이 다른 픽셀보다 상대적으로 낮다(어두운 부분일수록 값이 낮음).  
 > 이 가중치는 오른쪽에 놓인 직선을 만나면 크게 활성화될 것이다.
 ```python
 #비훈련 모델과의 비교
@@ -163,7 +164,7 @@ plt.show()
 ```
 > <img width="949" height="944" alt="image" src="https://github.com/user-attachments/assets/dc87365c-069a-4801-bd80-610710c8e9b6" />
 > 
-> 두 번째 합성곱 층의 필터 크기는 (3, 3, 32)이다.(필터의 깊이는 입력의 길이와 같다.)   
+> 두 번째 합성곱 층의 필터 크기는 (3, 3, 32)이다(필터의 깊이는 입력의 길이와 같음).   
 > 두 번째 합성곱 층의 첫 필터가 앞서 출력한 32개의 특성 맵과 곱해져 첫 번째 특성 맵이 된다.  
 > 이렇게 계산된 출력은 (14, 14, 32) 특성 맵에서 어떤 부위를 감지하는지 직관적으로 이해하기가 어렵다.  
 > 이런 현상은 합성곱 층을 많이 쌓을수록 심해진다. 이는 얕은 층의 합성곱 층에서는 이미지의 시각적인 정보를 감지하고,  
