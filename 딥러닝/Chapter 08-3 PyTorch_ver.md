@@ -28,6 +28,7 @@ model.add_module('dense2', nn.Linear(100, 10))
      
 model.load_state_dict(torch.load('best_cnn_model.pt', weights_only=True))
 
+# childeren(): 모델에 추가된 층을 반환하는 파이썬 제너레이터(generator) 객체를 반환
 layers = [layer for layer in model.children()]
      
 
@@ -35,12 +36,13 @@ print(layers[0])
      
 # Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=same)
 
+#Sequential() 클래스로 만든 모델은 정수 인덱스를 통해 층을 참조할 수 있다.
 model[0]
      
 # Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=same)
 
 for name, layer in model.named_children():
-    print(f"{name:10s}", layer)
+    print(f"{name:10s}", layer) # 문자열 name을 최소 10칸의 폭으로 출력하라
 '''     
 conv1      Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=same)
 relu1      ReLU()
@@ -60,6 +62,8 @@ model.conv1
 # Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=same)
 
 conv_weights = model.conv1.weight.data
+
+# PyTorch의 tensor는 numpy와 유사한 기능을 많이 제공한다.
 print(conv_weights.mean(), conv_weights.std())
      
 # tensor(-0.0550) tensor(0.3589)
@@ -122,7 +126,7 @@ with torch.no_grad():
 model.eval()
 x = ankle_boot
 with torch.no_grad():
-    for name, layer in model.named_children():
+    for name, layer in model.named_children(): # named_chidren(): (이름, 서브모듈)을 반환함
         x = layer(x)
         if name == 'relu2':
             break
