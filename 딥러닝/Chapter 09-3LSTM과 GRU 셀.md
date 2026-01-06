@@ -1,10 +1,10 @@
 ## LSTM의 구조
 LSTM은 은닉 상태(Hidden State, 이하 ht)외에 셀 상태(Cell State, 이하 ct)를 추가로 가진다.  
-* **셀 상태(Cell State)   
+* **셀 상태(Cell State)**   
   * 타임스텝을 따라 거의 선형적으로 흐르며 정보 보존   
   * 필요 없는 정보는 제거하고, 중요한 정보만 유지하도록 게이트가 제어  
 
-* **은닉 상태(Hidden State)
+* **은닉 상태(Hidden State)**
   * 외부로 출력되는 상태   
   * 현재 시점의 요약 정보   
   * 다음 LSTM 셀 및 출력층으로 전달됨  
