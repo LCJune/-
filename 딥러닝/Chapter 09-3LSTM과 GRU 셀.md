@@ -1,5 +1,5 @@
 ## LSTM의 구성 요소
-> <img width="1826" height="564" alt="image" src="https://github.com/user-attachments/assets/13849a11-3e7a-4812-b9f6-5e6978d37102" />
+> <img width="552" height="285" alt="image" src="https://github.com/user-attachments/assets/e959dc77-91c8-4002-9421-ce970790291a" />
 
 
 LSTM은 은닉 상태(Hidden State, 이하 ht)외에 셀 상태(Cell State, 이하 ct)를 추가로 가진다.  
